@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>905b6b3b-33b1-49fb-b691-ae30f88cb4f5</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BunnyHopMonogame</RootNamespace>
+    <AssemblyName>BunnyHopMonogame</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;LINUX</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;LINUX</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="BunnyHopGame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Sprite.cs" />
+    <Compile Include="Src\Timer.cs" />
+    <Compile Include="Src\Text.cs" />
+    <Compile Include="Src\Config.cs" />
+    <Compile Include="Src\OnOff.cs" />
+    <Compile Include="Src\Map.cs" />
+    <Compile Include="Src\States\GameStatePhase1.cs" />
+    <Compile Include="Src\States\MenuState.cs" />
+    <Compile Include="Src\States\OptionsState.cs" />
+    <Compile Include="Src\States\SplashState.cs" />
+    <Compile Include="Src\States\State.cs" />
+    <Compile Include="Src\Locator\ConfigLocator.cs" />
+    <Compile Include="Src\Locator\ContentLocator.cs" />
+    <Compile Include="Src\Locator\GraphicsLocator.cs" />
+    <Compile Include="Src\Entities\Player\PlayerShip.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyBomb.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyMeteor.cs" />
+    <Compile Include="Src\Entities\Enemy\Enemy.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyZeppelin.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemySpike.cs" />
+    <Compile Include="Src\Entities\Player\Player.cs" />
+    <Compile Include="Src\Entities\Player\PlayerDyingState.cs" />
+    <Compile Include="Src\Entities\Player\PlayerIdleState.cs" />
+    <Compile Include="Src\Entities\Player\PlayerShipState.cs" />
+    <Compile Include="Src\Entities\Player\PlayerState.cs" />
+    <Compile Include="Src\Entities\Player\PlayerStateMachine.cs" />
+    <Compile Include="Src\Entities\Player\PlayerWalkingState.cs" />
+    <Compile Include="Src\HUD\Hud.cs" />
+    <Compile Include="Src\Entities\Entity.cs" />
+    <Compile Include="Src\Entities\Bullets\Bullet.cs" />
+    <Compile Include="Src\Entities\Bullets\BulletPlayerMachinegun.cs" />
+    <Compile Include="Src\Entities\Bullets\BulletPlayerMisslegun.cs" />
+    <Compile Include="Src\Entities\Bullets\BulletPlayerShotgun.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyBear.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyDripper.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyHelicopter.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemySpace.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyBird.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyShell.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyHelicopterGun.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyFox.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyFoxShock.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyShield.cs" />
+    <Compile Include="Src\Entities\Bullets\BulletBossMeca.cs" />
+    <Compile Include="Src\Entities\Bullets\BulletEnemyBird.cs" />
+    <Compile Include="Src\Entities\Bullets\BulletEnemyHelicopter.cs" />
+    <Compile Include="Src\Entities\Efx\EfxExplosion.cs" />
+    <Compile Include="Src\Entities\Player\PlayerShipStateMachine.cs" />
+    <Compile Include="Src\Entities\Player\PlayerShipFlyingState.cs" />
+    <Compile Include="Src\States\GameStatePhase2.cs" />
+    <Compile Include="Src\Entities\Bullets\BulletPlayerShip.cs" />
+    <Compile Include="Src\Entities\Item\Antidote.cs" />
+    <Compile Include="Src\Entities\Item\Coin.cs" />
+    <Compile Include="Src\Entities\Item\Item.cs" />
+    <Compile Include="Src\Entities\Item\ItemMachinegun.cs" />
+    <Compile Include="Src\Entities\Item\ItemMisslegun.cs" />
+    <Compile Include="Src\Entities\Item\ItemShotgun.cs" />
+    <Compile Include="Src\Collision.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyMeteorSize.cs" />
+    <Compile Include="Src\Locator\StateLocator.cs" />
+    <Compile Include="Src\InMemoryDatabase.cs" />
+    <Compile Include="Src\Locator\InMemoryDatabaseLocator.cs" />
+    <Compile Include="Src\Entities\Player\PlayerShipDyingState.cs" />
+    <Compile Include="Src\Entities\Enemy\Behaviours\EnemyBehaviour.cs" />
+    <Compile Include="Src\Entities\Enemy\Behaviours\EnemyBehaviourLeftRight.cs" />
+    <Compile Include="Src\Entities\Enemy\Behaviours\EnemyBehaviourUpDown.cs" />
+    <Compile Include="Src\Entities\Enemy\Behaviours\EnemyBehaviourCircle.cs" />
+    <Compile Include="Src\Entities\Enemy\Behaviours\EnemyBehaviourShoot.cs" />
+    <Compile Include="Src\Entities\Enemy\EnemyDripperDirection.cs" />
+    <Compile Include="Src\Entities\Boss\Carrot\BossCarrot.cs" />
+    <Compile Include="Src\Entities\Boss\Meca\BossMeca.cs" />
+    <Compile Include="Src\Entities\Boss\Meca\BossMecaStateMachine.cs" />
+    <Compile Include="Src\Entities\Boss\Meca\BossMecaState.cs" />
+    <Compile Include="Src\Entities\Boss\Meca\BossMecaIdleState.cs" />
+    <Compile Include="Src\Entities\Boss\Meca\BossMecaShootingState.cs" />
+    <Compile Include="Src\Entities\Boss\Meca\BossMecaShootingWalkingState.cs" />
+    <Compile Include="Src\Entities\Boss\Meca\BossMecaDyingState.cs" />
+    <Compile Include="Src\Camera.cs" />
+    <Compile Include="Src\Locator\CameraLocator.cs" />
+    <Compile Include="Src\Entities\Boss\Carrot\BossCarrotState.cs" />
+    <Compile Include="Src\Entities\Boss\Carrot\BossCarrotStateMachine.cs" />
+    <Compile Include="Src\Entities\Boss\Carrot\BossCarrotIdleState.cs" />
+    <Compile Include="Src\Entities\Boss\Carrot\BossCarrotBombState.cs" />
+    <Compile Include="Src\Entities\Boss\Carrot\BossCarrotSpikeState.cs" />
+    <Compile Include="Src\Entities\Boss\Carrot\BossCarrotBombSpikeState.cs" />
+    <Compile Include="Src\Entities\Player\PlayerBite.cs" />
+    <Compile Include="Src\Entities\Bullets\BulletBossCarrot.cs" />
+    <Compile Include="Src\Entities\Spikes\SpikeBossCarrot.cs" />
+    <Compile Include="Src\Entities\Boss\Carrot\BossCarrotDyingState.cs" />
+    <Compile Include="Src\Locator\SoundLocator.cs" />
+    <Compile Include="Src\Entities\Enemy\Behaviours\EnemyEmptyBehaviour.cs" />
+    <Compile Include="Src\WeaponType.cs" />
+    <Compile Include="Src\EnumUtils.cs" />
+    <Compile Include="Src\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Src\Resources.ko-KR.Designer.cs">
+      <DependentUpon>Resources.ko-KR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Src\Resources.ja-JP.Designer.cs">
+      <DependentUpon>Resources.ja-JP.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended">
+      <HintPath>..\packages\MonoGame.Extended.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended.Graphics">
+      <HintPath>..\packages\MonoGame.Extended.Graphics.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended.Tiled">
+      <HintPath>..\packages\MonoGame.Extended.Tiled.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.Tiled.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+    <EmbeddedResource Include="Src\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src\Resources.ko-KR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ko-KR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src\Resources.ja-JP.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\SDL2.dll">
+      <Link>x86\SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\SDL2.dll">
+      <Link>x64\SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\soft_oal.dll">
+      <Link>x86\soft_oal.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\soft_oal.dll">
+      <Link>x64\soft_oal.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libSDL2-2.0.so.0">
+      <Link>x86\libSDL2-2.0.so.0</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libSDL2-2.0.so.0">
+      <Link>x64\libSDL2-2.0.so.0</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libopenal.so.1">
+      <Link>x86\libopenal.so.1</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libopenal.so.1">
+      <Link>x64\libopenal.so.1</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libSDL2-2.0.0.dylib">
+      <Link>libSDL2-2.0.0.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libopenal.1.dylib">
+      <Link>libopenal.1.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll.config">
+      <Link>MonoGame.Framework.dll.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Src\Resources.ko.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Src\" />
+    <Folder Include="Src\Entities\" />
+    <Folder Include="Src\States\" />
+    <Folder Include="Src\Locator\" />
+    <Folder Include="Src\Entities\Player\" />
+    <Folder Include="Src\Entities\Enemy\" />
+    <Folder Include="Src\Entities\Boss\" />
+    <Folder Include="Src\HUD\" />
+    <Folder Include="Src\Entities\Bullets\" />
+    <Folder Include="Src\Entities\Efx\" />
+    <Folder Include="Src\Entities\Item\" />
+    <Folder Include="Src\Entities\Enemy\Behaviours\" />
+    <Folder Include="Src\Entities\Boss\Carrot\" />
+    <Folder Include="Src\Entities\Boss\Meca\" />
+    <Folder Include="Src\Entities\Spikes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+</Project>
