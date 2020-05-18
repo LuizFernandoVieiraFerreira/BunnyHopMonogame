@@ -213,3 +213,5 @@ ModelManifest.xml
 
 # Setup deploy
 deploy/
+
+/**/.DS_Store
