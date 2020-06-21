@@ -28,28 +28,22 @@ namespace BunnyHopMonogame.Src.States {
         public override void LoadContent(ContentManager content) {
             bgGamb = content.Load<Texture2D>("splash_gamb");
             bgLove = content.Load<Texture2D>("splash_love");
-        }
+        }        
 
-        public override void Update(GameTime gameTime)
-        {
+        public override void Update(GameTime gameTime) {
             mFadeDelay -= gameTime.ElapsedGameTime.TotalSeconds;
-            if (mFadeDelay <= 0)
-            {
+            if (mFadeDelay <= 0) {
                 mFadeDelay = .035;
                 mAlphaValue += mFadeIncrement;
-                if (mAlphaValue >= 255)
-                {
+                if (mAlphaValue >= 255) {
                     mFadeIncrement *= -1;
                 }
-                else if (mAlphaValue <= 0)
-                {
-                    if (firstImage)
-                    {
+                else if (mAlphaValue <= 0) {
+                    if (firstImage) {
                         firstImage = false;
                         mFadeIncrement *= -1;
                     }
-                    else
-                    {
+                    else {
                         game.Push(new MenuState());
                     }
                 }
