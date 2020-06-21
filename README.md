@@ -8,6 +8,8 @@ In the game you control a bunny that flies in his airplane to save his beloved w
 
 ## Download
 
+This game is under development ...
+
 - [Windows]
 - [MacOS]
 - [Linux]
